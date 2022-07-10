@@ -25,7 +25,7 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         return compWin;
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return layerWin;
+        return playerWin;
     } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
         return draw;
     }
