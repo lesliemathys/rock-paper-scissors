@@ -5,29 +5,34 @@ function computerPlay() {
 }
 computerPlay()
 
-function playRound(playerSelection, computerPlay) {
+function playRound(playerSelection, computerSelection) {
     const playerWin = 'You won!';
     const compWin = 'You lost!';
     const draw = 'It\'s a tie!';
 
-    if (playerSelection === 'rock' && computerPlay === 'rock') {
-        console.log(draw);
-    } else if (playerSelection === 'rock' && computerPlay === 'paper') {
-        console.log(compWin);
-    } else if (playerSelection === 'rock' && computerPlay === 'scissors') {
-        console.log(playerWin);
-    } else if (playerSelection === 'paper' && computerPlay === 'rock') {
-        console.log(playerWin);
-    } else if (playerSelection === 'paper' && computerPlay === 'paper') {
-        console.log(draw);
-    } else if (playerSelection === 'paper' && computerPlay === 'scissors') {
-        console.log(compWin);
-    } else if (playerSelection === 'scissors' && computerPlay === 'rock') {
-        console.log(compWin);
-    } else if (playerSelection === 'scissors' && computerPlay === 'paper') {
-        console.log(playerWin);
-    } else if (playerSelection === 'scissors' && computerPlay === 'scissors') {
-        console.log(draw);
+    if (playerSelection === 'rock' && computerSelection === 'rock') {
+        return draw;
+    } else if (playerSelection === 'rock' && computerSelection === 'paper') {
+        return compWin;
+    } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
+        return playerWin;
+    } else if (playerSelection === 'paper' && computerSelection === 'rock') {
+        return playerWin;
+    } else if (playerSelection === 'paper' && computerSelection === 'paper') {
+        return draw;
+    } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
+        return compWin;
+    } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
+        return compWin;
+    } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
+        return layerWin;
+    } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
+        return draw;
     }
 }
-playRound()
+const playerSelection = "rock";
+const computerSelection = computerPlay();
+
+console.log(playerSelection);
+console.log(computerSelection);
+console.log(playRound(playerSelection, computerSelection));
