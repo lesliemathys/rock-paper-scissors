@@ -30,7 +30,7 @@ function playRound(playerSelection, computerSelection) {
         return draw;
     }
 }
-let playerSelection = "PAPER".toLowerCase();
+const playerSelection = "PAPER".toLowerCase();
 const computerSelection = computerPlay();
 
 console.log(playerSelection);
