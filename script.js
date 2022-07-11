@@ -10,27 +10,53 @@ function playRound(playerSelection, computerSelection) {
     const compWin = 'You lost!';
     const draw = 'It\'s a tie!';
 
+    let playerScore = 0;
+    let compScore = 0;
+
     if (playerSelection === 'rock' && computerSelection === 'rock') {
-        return draw;
+        console.log(draw);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
+
     } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        return compWin;
+        compScore++;
+        console.log(compWin);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
+
     } else if (playerSelection === 'rock' && computerSelection === 'scissors') {
-        return playerWin;
+        playerScore++;
+        console.log(playerWin);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
+
     } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        return playerWin;
+        playerScore++;
+        console.log(playerWin);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
+
     } else if (playerSelection === 'paper' && computerSelection === 'paper') {
-        return draw;
+        console.log(draw);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
+
     } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        return compWin;
+        compScore++;
+        console.log(compWin);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
+
     } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        return compWin;
+        compScore++;
+        console.log(compWin);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
+
     } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        return playerWin;
+        playerScore++;
+        console.log(playerWin);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
+        
     } else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-        return draw;
+        console.log(draw);
+        console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
     }
 }
-const playerSelection = "PAPER".toLowerCase();
+const playerSelection = "rock".toLowerCase();
 const computerSelection = computerPlay();
 
 console.log(playerSelection);
