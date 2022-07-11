@@ -18,17 +18,17 @@ function playRound(playerSelection, computerSelection) {
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
 
     } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'paper') {
-        compScore++;
+        compScore += 1;
         console.log(compWin);
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
 
     } else if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'scissors') {
-        playerScore++;
+        playerScore += 1;
         console.log(playerWin);
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
 
     } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'rock') {
-        playerScore++;
+        playerScore += 1;
         console.log(playerWin);
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
 
@@ -37,17 +37,17 @@ function playRound(playerSelection, computerSelection) {
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
 
     } else if (playerSelection.toLowerCase() === 'paper' && computerSelection === 'scissors') {
-        compScore++;
+        compScore += 1;
         console.log(compWin);
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
 
     } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'rock') {
-        compScore++;
+        compScore += 1;
         console.log(compWin);
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
 
     } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'paper') {
-        playerScore++;
+        playerScore += 1;
         console.log(playerWin);
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
         
