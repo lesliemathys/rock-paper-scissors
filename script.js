@@ -1,3 +1,7 @@
+let playerScore = 0;
+let compScore = 0;
+// let gameScore = (`Player: ${playerScore}`, `Comp: ${compScore}`);
+
 function computerPlay() {
     let choices = ['rock', 'paper', 'scissors'];
     let randomChoice = choices[Math.floor(Math.random() * choices.length)];
@@ -9,9 +13,6 @@ function playRound(playerSelection, computerSelection) {
     const playerWin = 'You won!';
     const compWin = 'You lost!';
     const draw = 'It\'s a tie!';
-
-    let playerScore = 0;
-    let compScore = 0;
 
     if (playerSelection.toLowerCase() === 'rock' && computerSelection === 'rock') {
         console.log(draw);
@@ -50,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
         playerScore += 1;
         console.log(playerWin);
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
-        
+
     } else if (playerSelection.toLowerCase() === 'scissors' && computerSelection === 'scissors') {
         console.log(draw);
         console.log(`Player: ${playerScore}`, `Comp: ${compScore}`);
